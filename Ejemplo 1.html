@@ -4,12 +4,16 @@
   <script type="text/javascript">		//define its a javascript archive
     var divs = new Array();		//array creation
     divs[0] = "errFirst";
-    divs[1] = "errLast";			//define the fields
+    divs[1] = "errLast";			//define the fields 
     divs[2] = "errEmail";
-    divs[3] = "errUid";
+    divs[3] = "errUid";				
     divs[4] = "errPassword";
     divs[5] = "errConfirm";
+<<<<<<< HEAD
 	divs[6] = "erraddress";
+=======
+	divs[7] = "errcellphone";
+>>>>>>> datos nuevos aniadidos para conflictos
     function validate()
 {
       var inputs = new Array();
@@ -19,9 +23,11 @@
       inputs[3] = document.getElementById('uid').value;
       inputs[4] = document.getElementById('password').value;
       inputs[5] = document.getElementById('confirm').value;
-
+<<<<<<< HEAD
 	  inputs[6] = document.getElementById('address').value;
-
+=======
+	  inputs[7] == document.getElementById('cellphone').value;
+>>>>>>> datos nuevos aniadidos para conflictos
       var errors = new Array();
       errors[0] = "<span style='color:red'>Please enter your first name!</span>";
       errors[1] = "<span style='color:red'>Please enter your last name!</span>";
@@ -29,8 +35,11 @@
       errors[3] = "<span style='color:red'>Please enter your user id!</span>";
       errors[4] = "<span style='color:red'>Please enter your password!</span>";
       errors[5] = "<span style='color:red'>Please confirm your password!</span>";
-	  errors[6] = "<span style='color:red'>Please enter your address!</span>";x`
-	  errors[6] = "<span style='color:red'>Please enter your cellphone number!</span>";
+<<<<<<< HEAD
+	  errors[6] = "<span style='color:red'>Please enter your address!</span>";
+=======
+	  errors[7] = "<span style='color:red'>Please enter your cellphone number!</span>";
+>>>>>>> datos nuevos aniadidos para conflictos
       for (i in inputs)
       {
         var errMessage = errors[i];
@@ -72,7 +81,7 @@
           if(count == 7)
           document.getElementById("errFinal").innerHTML = "All the data you entered is correct!!!";
         }
-
+		
    </script>
 </head>
 <body>
@@ -111,6 +120,8 @@
         <td>Address</td>
         <td><input type="address" id="address" onkeyup="validate();"/></td>
         <td><div id="erraddress"></div></td>
+	</tr>
+	<tr>
         <td>Cellphone</td>
         <td><input type="cellphone" id="cellphone" onkeyup="validate();"/></td>
         <td><div id="errcellphone"></div></td>
